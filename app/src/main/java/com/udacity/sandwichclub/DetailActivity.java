@@ -23,7 +23,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ImageView ingredientsIv = findViewById(R.id.image_iv);
+        ImageView ingredientsIv = findViewById(R.id.image_tv);
 
         Intent intent = getIntent();
         if (intent == null) {
@@ -61,22 +61,22 @@ public class DetailActivity extends AppCompatActivity {
 
     private void populateUI(Sandwich sandwich) {
 
-        ImageView imageView = findViewById(R.id.image_iv);
+        ImageView imageView =  findViewById(R.id.image_tv);
         TextView AKAlist = findViewById(R.id.also_known_tv);
         TextView origin = findViewById(R.id.origin_tv);
         TextView description = findViewById(R.id.description_tv);
         TextView ingrelist = findViewById(R.id.ingredients_tv);
 
-        if (!(sandwich.getImage().isEmpty())) {
-            origin.setText(sandwich.getImage());
-        }
+        /*if (!(sandwich.getImage().isEmpty())) {
+            imageView.setImageAlpha();
+        }*/
 
         if (!(sandwich.getPlaceOfOrigin().isEmpty())) {
             origin.setText(sandwich.getPlaceOfOrigin());
         }
 
         if (!(sandwich.getDescription().isEmpty())) {
-            origin.setText(sandwich.getDescription());
+            description.setText(sandwich.getDescription());
         }
 
         List<String> alsoKnownAs = sandwich.getAlsoKnownAs();
@@ -91,16 +91,16 @@ public class DetailActivity extends AppCompatActivity {
             }
             AKAlist.setText(result);
 
-            result = "";
-
-            List<String> ingredients = sandwich.getIngredients();
-            if (!(ingredients.isEmpty()))
-                for (String s : ingredients) {
-                    result = result + s + "\n";
-                }
-                ingrelist.setText(result);
-
             }
+
+       List<String> ingredients = sandwich.getIngredients();
+        if (!(ingredients.isEmpty())) {
+            String result1 = "";
+            for (String s : ingredients) {
+                result1 = result1 + s + "\n";
+            }
+            ingrelist.setText(result1);
+        }
 
         }
 

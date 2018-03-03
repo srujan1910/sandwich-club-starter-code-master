@@ -5,55 +5,56 @@
     android:layout_height="match_parent"
     tools:context="com.udacity.sandwichclub.DetailActivity">
 
+    <TextView
+        android:id="@+id/origin_tv"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="220dp"
+        tools:text="@string/detail_place_of_origin_label" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/also_known_tv"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="200dp"
+        tools:text="@string/detail_also_known_as_label" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textStyle="bold" />
+
     <ImageView
-        android:id="@+id/image_iv"
+        android:id="@+id/image_tv"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/sandwich_picture_content_description"
-        android:scaleType="centerCrop" />
+        android:cropToPadding="false"
+        android:scaleType="center" />
 
     <TextView
-        android:id="@+id/origin_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/ingredients_tv"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="355dp"
+        tools:text="@string/detail_ingredients_label" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_also_known_as_label"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_ingredients_label"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_place_of_origin_label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/description_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="240dp"
+        tools:text="@string/detail_description_label" />
 
-    <TextView
-        android:id="@+id/ingredients_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/also_known_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_description_label"
-        android:textStyle="bold" />
 </FrameLayout>
